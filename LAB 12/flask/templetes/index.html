@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Marks Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Student Marks</h1>
+        <form method="POST" action="/predict">
+            <label>Number of Courses:</label><br>
+            <input type="number" name="number_courses" required><br>
+            <label>Time Studied (hours):</label><br>
+            <input type="number" name="time_study" required><br>
+            <input type="submit" value="Predict">
+        </form>
+        <h2>{{ prediction_text }}</h2>
+    </div>
+</body>
+</html>
